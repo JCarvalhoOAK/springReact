@@ -42,7 +42,7 @@ public class DomainApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Client c1 = new Client(null, "Alex Green", "alex@gmail.com");
+		Client c1 = new Client(null, "Rafael Souza", "rafasouza@gmail.com");
 
 		clientRepository.save(c1);
 
@@ -52,8 +52,8 @@ public class DomainApplication implements CommandLineRunner {
 
 		productRepository.saveAll(Arrays.asList(p1, p2, p3));
 
-		Order o1 = new Order(null, Instant.parse("2021-04-18T11:25:09Z"), OrderStatus.PAID, c1);
-		Order o2 = new Order(null, Instant.parse("2021-04-20T13:30:00Z"), OrderStatus.WAITING, c1);
+		Order o1 = new Order(null, Instant.parse("2022-04-18T11:25:09Z"), OrderStatus.PAID, c1);
+		Order o2 = new Order(null, Instant.parse("2022-04-20T13:30:00Z"), OrderStatus.WAITING, c1);
 
 		orderRepository.saveAll(Arrays.asList(o1, o2));
 
